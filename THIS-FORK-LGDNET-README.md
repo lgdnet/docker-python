@@ -47,9 +47,7 @@ git push -f origin master
 
 ## Configuring automated build
 
-- On [dockerhub organisation `lgdnet`](https://cloud.docker.com/u/lgdnet/settings)'s follow [settings/Linked Accounts]()
-
-- On project [lgdnet/docker-python](https://cloud.docker.com/u/lgdnet/repository/docker/lgdnet/kaggle-python) on [dockerhub](https://hub.docker.com/?namespace=lgdnet) ensure GithHub's `lgdlab` is mentionned.
+- On [dockerhub organisation `lgdnet`](https://cloud.docker.com/u/lgdnet/settings) under `settings/Linked Accounts` ensure GithHub's account `lgdlab` is mentionned.
 
 ```text
 Linked Accounts
@@ -65,7 +63,7 @@ Attaching your personal GitHub or Bitbucket account to this Docker Hub organizat
   - Click the plug icon for the source provider you want to link.
 - link to Github's organisation `lgdnet`, account `lgdnet-service-account`, which is (should be) a member of team `build` with admin rights on Github project [lgdnet/docker-python](https://github.com/lgdnet/docker-python)
 
-- follow [Builds/Configure Automated Builds](https://cloud.docker.com/u/lgdnet/repository/docker/lgdnet/kaggle-python/builds/edit) and specify configurations:
+- Still on [dockerhub organisation `lgdnet`](https://cloud.docker.com/u/lgdnet) follow [Builds/Configure Automated Builds](https://cloud.docker.com/u/lgdnet/repository/docker/lgdnet/kaggle-python/builds/edit) and specify configurations:
 
 - | key        | value                 |
   | ---------- | --------------------- |
@@ -78,3 +76,5 @@ Attaching your personal GitHub or Bitbucket account to this Docker Hub organizat
   | Source Type | Source | Docker Tag | Dockerfile location | Build Context | Autobuild | Build Caching |
   | ----------- | ------ | ---------- | ------------------- | ------------- | --------- | ------------- |
   | branch      | master | gpu-latest | gpu.Dockerfile      | /             | no ?      | yes ?         |
+
+- trigger a build under [Builds/ Automated Builds](https://cloud.docker.com/u/lgdnet/repository/docker/lgdnet/kaggle-python/builds)
